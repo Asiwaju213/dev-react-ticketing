@@ -1,0 +1,2 @@
+.toast-outer{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:8px}
+.toast{background:#111;color:#fff;padding:10px 12px;border-radius:8px;box-shadow:0 6px 18px rgba(16,24,40,0.3)}

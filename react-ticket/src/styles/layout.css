@@ -1,0 +1,28 @@
+/* layout and container */
+:root{
+  --max-w: 1440px;
+  --container-pad: 16px;
+  --bg: #f7f8fc;
+  --muted: #6b7280;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#111;background:var(--bg)}
+
+.container{max-width:var(--max-w);margin:0 auto;padding:24px}
+.app-root{display:flex;flex-direction:column;min-height:100vh}
+main.container{flex:1}
+
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;border:1px solid transparent;text-decoration:none;cursor:pointer}
+.btn-primary{background:#6c63ff;color:#fff}
+.btn-outline{background:transparent;border-color:#6c63ff;color:#6c63ff}
+.btn-ghost{background:transparent;border-color:transparent}
+.btn-danger{background:#ff6b6b;color:#fff;border-color:#ff6b6b}
+
+.muted{color:var(--muted)}
+.form-error{color:#b91c1c}
+
+@media (max-width:640px){
+  .container{padding:12px}
+}

@@ -1,0 +1,11 @@
+@import './styles/layout.css';
+@import './styles/navbar.css';
+@import './styles/landing.css';
+@import './styles/auth.css';
+@import './styles/dashboard.css';
+@import './styles/tickets.css';
+@import './styles/ticketcard.css';
+@import './styles/toast.css';
+
+/* small global tweaks */
+.container{padding-top:20px;padding-bottom:20px}

@@ -1,0 +1,8 @@
+.tickets-page{display:grid;grid-template-columns:360px 1fr;gap:18px;padding:24px 0}
+.tickets-form{background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.tickets-form label{display:block;margin:8px 0}
+.tickets-form input, .tickets-form textarea, .tickets-form select{width:100%;padding:8px;border-radius:8px;border:1px solid #e6e9ef}
+.tickets-form textarea{resize:none;max-height:120px;overflow:auto}
+.tickets-list{background:transparent}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:900px){.tickets-page{grid-template-columns:1fr}.cards{grid-template-columns:1fr}}

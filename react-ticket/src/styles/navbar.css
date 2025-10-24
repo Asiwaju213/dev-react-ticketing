@@ -1,0 +1,8 @@
+.nav{background:#fff;border-bottom:1px solid #eef2ff}
+.nav-inner{display:flex;align-items:center;gap:16px;justify-content:space-between}
+.brand{font-weight:700;color:#111;text-decoration:none}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:12px}
+nav a{color:#374151;text-decoration:none}
+.nav-actions{display:flex;gap:8px;align-items:center}
+.nav-user{color:#6b7280}
+@media (max-width:700px){nav ul{display:none}}
