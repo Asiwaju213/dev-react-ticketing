@@ -15,9 +15,22 @@ export default function AuthLogin() {
     e.preventDefault()
     setError('')
     if (!email || !password) return setError('Please fill in all fields.')
-    // mock credentials
-    if (email === 'demo@ticketflow.com' && password === 'demo123') {
-      const session = { email }
+    const normalizedEmail = email.trim().toLowerCase()
+    // allow demo account
+    if (normalizedEmail === 'demo@ticketflow.com' && password === 'demo123') {
+      const session = { email: normalizedEmail }
+      localStorage.setItem('ticketapp_session', JSON.stringify(session))
+      setUser(session)
+      navigate('/dashboard')
+      return
+    }
+
+    // check persisted users
+    const usersRaw = localStorage.getItem('ticketapp_users')
+    const users = usersRaw ? JSON.parse(usersRaw) : []
+    const match = users.find((u: any) => u.email === normalizedEmail && u.password === password)
+    if (match) {
+      const session = { email: normalizedEmail }
       localStorage.setItem('ticketapp_session', JSON.stringify(session))
       setUser(session)
       navigate('/dashboard')

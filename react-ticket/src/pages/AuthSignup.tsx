@@ -17,7 +17,19 @@ export default function AuthSignup() {
     setError('')
     if (!email || !password || !confirm) return setError('Please fill in all fields.')
     if (password !== confirm) return setError('Passwords do not match.')
-    const session = { email }
+
+    const normalizedEmail = email.trim().toLowerCase()
+    // persist user to localStorage (simple demo storage)
+    const usersRaw = localStorage.getItem('ticketapp_users')
+    const users = usersRaw ? JSON.parse(usersRaw) : []
+    if (users.find((u: any) => u.email === normalizedEmail)) {
+      setError('Account already exists. Try logging in.')
+      return
+    }
+    users.push({ email: normalizedEmail, password })
+    localStorage.setItem('ticketapp_users', JSON.stringify(users))
+
+    const session = { email: normalizedEmail }
     localStorage.setItem('ticketapp_session', JSON.stringify(session))
     setUser(session)
     navigate('/dashboard')
