@@ -8,6 +8,11 @@
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "handle": "filesystem" },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html",
+      "headers": { "cache-control": "no-cache, no-store, must-revalidate" }
+    }
   ]
 }
