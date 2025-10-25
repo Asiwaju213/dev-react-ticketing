@@ -1,7 +1,7 @@
 .tickets-page{display:grid;grid-template-columns:360px 1fr;gap:18px;padding:24px 0}
-.tickets-form{background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
-.tickets-form label{display:block;margin:8px 0}
-.tickets-form input, .tickets-form textarea, .tickets-form select{width:100%;padding:8px;border-radius:8px;border:1px solid #e6e9ef}
+.tickets-form{background:var(--surface);padding:16px;border-radius:12px;box-shadow:0 10px 40px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.02)}
+.tickets-form label{display:block;margin:8px 0;color:var(--muted)}
+.tickets-form input, .tickets-form textarea, .tickets-form select{width:100%;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
 .tickets-form textarea{resize:none;max-height:120px;overflow:auto}
 .tickets-list{background:transparent}
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
